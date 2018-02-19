@@ -1,6 +1,6 @@
 public protocol Newtype: Equatable where UnderlyingType: Equatable {
     associatedtype UnderlyingType
-    var value: UnderlyingType { get set }
+    var value: UnderlyingType { get }
     init(value: UnderlyingType)
     init(_ value: UnderlyingType)
     static func wrap(_ x: UnderlyingType) -> Self

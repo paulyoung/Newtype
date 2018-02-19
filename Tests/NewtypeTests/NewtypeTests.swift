@@ -2,11 +2,11 @@ import XCTest
 import Newtype
 
 struct Label: Newtype {
-    var value: String
+    let value: String
 }
 
 struct UppercaseLabel: Newtype {
-    var value: String
+    let value: String
 }
 
 func uppercase(_ s: String) -> String {
@@ -14,11 +14,11 @@ func uppercase(_ s: String) -> String {
 }
 
 struct Meter: Newtype {
-    var value : Int
+    let value : Int
 }
 
 struct SquareMeter: Newtype {
-    var value: Int
+    let value: Int
 }
 
 func multiply(_ x: Int) -> (_ y: Int) -> Int {
