@@ -34,28 +34,28 @@ class NewtypeTests: XCTestCase {
         let unwrapped = unwrap(wrapped)
         XCTAssertEqual(unwrapped, text)
     }
-    
+
     func testUnwrapWrap() {
         let label = Label("Hello, World!")
         let unwrapped = unwrap(label)
         let wrapped: Label = wrap(unwrapped)
         XCTAssertEqual(wrapped, label)
     }
-    
+
     func testOver() {
         let uppercaseLabel: (Label) -> Label = over(uppercase)
         let label = Label("Hello, World!")
         let uppercased = uppercaseLabel(label)
         XCTAssertEqual(uppercased, Label("HELLO, WORLD!"))
     }
-    
+
     func testOverPolymorphicReturnType() {
         let uppercaseLabel: (Label) -> UppercaseLabel = over(uppercase)
         let label = Label("Hello, World!")
         let uppercased = uppercaseLabel(label)
         XCTAssertEqual(uppercased, UppercaseLabel("HELLO, WORLD!"))
     }
-    
+
     func testOver2() {
         let length = Meter(2)
         let breadth = Meter(3)
