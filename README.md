@@ -12,8 +12,8 @@ Borrowing from [the section on newtypes in PureScript by Example](https://leanpu
 ```swift
 import Newtype
 
-struct Pixels: Newtype { value: Int }
-struct Inches: Newtype { value: Int }
+struct Pixels: Newtype { let value: Int }
+struct Inches: Newtype { let value: Int }
 ```
 
 This way, it is impossible to pass a value of type `Pixels` to a function which expects `Inches`.
