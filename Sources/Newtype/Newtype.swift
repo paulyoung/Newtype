@@ -39,7 +39,7 @@ public func unwrap<T: Newtype>(_ x: T) -> T.UnderlyingType {
 //
 // ```swift
 // struct Label: Newtype {
-//     var value: String
+//     let value: String
 // }
 //
 // func uppercase(_ s: String) -> String {
@@ -54,7 +54,7 @@ public func unwrap<T: Newtype>(_ x: T) -> T.UnderlyingType {
 //
 // ```swift
 // struct UppercaseLabel: Newtype {
-//     var value: String
+//     let value: String
 // }
 //
 // let uppercasedLabel: (Label) -> UppercaseLabel = over(uppercase)
@@ -68,8 +68,13 @@ public func over<T: Newtype, S: Newtype>(_ f: @escaping (T.UnderlyingType) -> S.
 // Lifts a binary function to operate over newtypes.
 //
 // ```swift
-// struct Meter: Newtype { value: Int }
-// struct SquareMeter: Newtype { value: Int }
+// struct Meter: Newtype {
+//     let value: Int
+// }
+//
+// struct SquareMeter: Newtype {
+//     let value: Int
+// }
 //
 // let area: (Meter) -> (Meter) -> SquareMeter = over2(multiply)
 // ```
