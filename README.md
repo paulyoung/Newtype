@@ -1,5 +1,7 @@
 # Newtype
 
+**Consider using [pointfreeco/swift-tagged](https://github.com/pointfreeco/swift-tagged) instead.**
+
 An approximation of newtypes in Swift. Inspired by [purescript-newtype](https://github.com/purescript/purescript-newtype).
 
 The `Newtype` protocol provides default implementations to enable convenient wrapping and unwrapping, and the use of the other functions in this module.
